@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2024 at 06:55 PM
+-- Generation Time: Dec 05, 2024 at 02:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -84,8 +84,7 @@ CREATE TABLE `cart_items` (
 --
 
 INSERT INTO `cart_items` (`cart_id`, `user_id`, `product_id`, `quantity`, `created_at`, `updated_at`) VALUES
-(30, 5, 20, 1, '2024-11-26 06:14:47', '2024-11-26 06:14:47'),
-(43, 37, 24, 1, '2024-11-27 16:22:04', '2024-11-27 16:22:04');
+(30, 5, 20, 1, '2024-11-26 06:14:47', '2024-11-26 06:14:47');
 
 -- --------------------------------------------------------
 
@@ -236,7 +235,9 @@ INSERT INTO `orders` (`order_id`, `order_date`, `client_name`, `client_contact`,
 (76, '2024-11-27', '', '', 0.00, 0.00, 153.40, 0.00, 0.00, 0.00, 0.00, 0, 0, 0, '', 2, 32, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL),
 (77, '2024-11-27', 'Nikko', '09270533556', 550.00, 99.00, 649.00, 0.00, 649.00, 649.00, 0.00, 2, 1, 1, '99.00', 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL),
 (78, '2024-11-28', '', '', 0.00, 0.00, 153.40, 0.00, 0.00, 0.00, 0.00, 0, 0, 0, '', 1, 38, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL),
-(79, '2024-11-28', 'test', '123123123', 130.00, 23.40, 153.40, 0.00, 153.40, 153.40, 0.00, 2, 1, 1, '23.40', 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL);
+(79, '2024-11-28', 'test', '123123123', 130.00, 23.40, 153.40, 0.00, 153.40, 153.40, 0.00, 2, 1, 1, '23.40', 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL),
+(80, '2024-12-02', 'Nikko', '1231231231', 600.00, 150.00, 0.00, 0.00, 750.00, 750.00, 0.00, 2, 1, 1, '150', 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL),
+(81, '2024-12-02', '123', '123', 260.00, 65.00, 0.00, 0.00, 325.00, 325.00, 0.00, 2, 1, 1, '65.00', 1, 1, NULL, NULL, 0.00, 0.00, 0.00, 0.00, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -271,7 +272,9 @@ INSERT INTO `order_item` (`order_item_id`, `order_id`, `product_id`, `quantity`,
 (58, 74, 37, '6', '10', '60.00', 1),
 (59, 75, 37, '10', '10', '100.00', 1),
 (60, 77, 20, '1', '550', '550.00', 1),
-(61, 79, 24, '1', '130', '130.00', 1);
+(61, 79, 24, '1', '130', '130.00', 1),
+(62, 80, 21, '3', '200', '600', 1),
+(63, 81, 17, '2', '130', '260.00', 1);
 
 -- --------------------------------------------------------
 
@@ -343,9 +346,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `description`, `product_image`, `brand_id`, `categories_id`, `quantity`, `rate`, `active`, `status`) VALUES
-(17, 'Kapeng Barako', 'Kapeng Barako, the pride of Batangas, is a distinct variety of coffee (Coffea Liberica) known for its strong flavor and intense aroma. Grown in the rich volcanic soils of Batangas, this coffee variety has been part of Filipino culture for generations. Each cup delivers a bold, full-bodied taste with a distinctive smoky flavor and notes of dark chocolate. Perfect for traditional Filipino coffee preparation methods.\r\n\r\nFeatures:\r\n• 100% Pure Liberica Coffee\r\n• Strong, Full-bodied Flavor\r\n• Rich Aroma\r\n• Locally Grown in Batangas\r\n• Available in whole bean or ground options\r\n\r\nBrewing Suggestion:', '../assests/images/stock/560274716732b8fbb055a.jpg', 10, 12, '100', '130', 1, 1),
+(17, 'Kapeng Barako', 'Kapeng Barako, the pride of Batangas, is a distinct variety of coffee (Coffea Liberica) known for its strong flavor and intense aroma. Grown in the rich volcanic soils of Batangas, this coffee variety has been part of Filipino culture for generations. Each cup delivers a bold, full-bodied taste with a distinctive smoky flavor and notes of dark chocolate. Perfect for traditional Filipino coffee preparation methods.\r\n\r\nFeatures:\r\n• 100% Pure Liberica Coffee\r\n• Strong, Full-bodied Flavor\r\n• Rich Aroma\r\n• Locally Grown in Batangas\r\n• Available in whole bean or ground options\r\n\r\nBrewing Suggestion:', '../assests/images/stock/560274716732b8fbb055a.jpg', 10, 12, '98', '130', 1, 1),
 (20, 'Dried Fish', 'Premium Dried Fish (Tuyo) from the fishing communities of Batangas, carefully processed using traditional sun-drying methods passed down through generations. Our dried fish is selected from the freshest catch and prepared with the perfect balance of salt to enhance its natural flavors.\r\n\r\nFeatures:\r\n• Traditionally Sun-dried\r\n• Premium Quality Selection\r\n• Perfect Salt Balance\r\n• Rich in Protein and Calcium\r\n• Vacuum Sealed for Freshness\r\n\r\nServing Suggestion: Best served with fried rice and eggs for a traditional Filipino breakfast, or crumbled as a savory topping.', '../assests/images/stock/184470098167334f1a18f01.jpg', 13, 14, '586', '550', 1, 1),
-(21, 'Lambanog', 'Authentic Batangas Lambanog, a traditional Filipino coconut wine distilled from the sap of coconut flowers. This artisanal spirit is crafted using time-honored methods, resulting in a pure, clean-tasting drink that represents the heritage of Batangas distilling.\r\n\r\nFeatures:\r\n• 100% Pure Coconut Sap\r\n• Traditional Distillation Process\r\n• Crystal Clear Appearance\r\n• Smooth, Clean Taste\r\n• No Artificial Additives\r\n\r\nServing Suggestion: Best served chilled or as a base for tropical cocktails.', '../assests/images/stock/2126617513673825b0a918d.jpg', 10, 12, '100', '200', 1, 1),
+(21, 'Lambanog', 'Authentic Batangas Lambanog, a traditional Filipino coconut wine distilled from the sap of coconut flowers. This artisanal spirit is crafted using time-honored methods, resulting in a pure, clean-tasting drink that represents the heritage of Batangas distilling.\r\n\r\nFeatures:\r\n• 100% Pure Coconut Sap\r\n• Traditional Distillation Process\r\n• Crystal Clear Appearance\r\n• Smooth, Clean Taste\r\n• No Artificial Additives\r\n\r\nServing Suggestion: Best served chilled or as a base for tropical cocktails.', '../assests/images/stock/2126617513673825b0a918d.jpg', 10, 12, '97', '200', 1, 1),
 (22, 'sample', '', '../assests/images/stock/549978077673c38f641d68.jpg', 10, 12, '5', '5', 2, 2),
 (24, 'Bagoong Balayan', 'Bagoong Balayan, a heritage product of Batangas, is a traditional fermented fish paste that has been produced in Balayan for centuries. This rich, flavorful condiment is made using anchovy and salt, naturally fermented to develop its complex taste profile.\r\n\r\nFeatures:\r\n• Traditional Fermentation Process\r\n• Rich Umami Flavor\r\n• No Artificial Preservatives\r\n• Authentic Balayan Recipe\r\n• Versatile Cooking Ingredient\r\n\r\nUsage: Perfect as a cooking ingredient, condiment, or dipping sauce for green mangoes.', '../assests/images/stock/417242946746ca6b61dd0.jpg', 10, 14, '99', '130', 1, 1),
 (25, 'Suman', 'Suman, a beloved Filipino rice cake made from glutinous rice and coconut milk, carefully wrapped in banana leaves. This traditional delicacy is handcrafted following authentic Batangas recipes, resulting in a soft, chewy texture and subtle sweetness.\r\n\r\nFeatures:\r\n• Made with Premium Glutinous Rice\r\n• Fresh Coconut Milk\r\n• Natural Banana Leaf Wrapper\r\n• No Artificial Preservatives\r\n• Handcrafted Daily\r\n\r\nServing Suggestion: Best enjoyed with muscovado sugar or fresh mangoes.', '../assests/images/stock/14303574716746cabfdefc9.png', 10, 14, '100', '30', 1, 1),
@@ -895,13 +898,13 @@ ALTER TABLE `library`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `order_tracking`
@@ -980,36 +983,10 @@ ALTER TABLE `user_notifications`
 --
 
 --
--- Constraints for table `cart_items`
---
-ALTER TABLE `cart_items`
-  ADD CONSTRAINT `cart_items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  ADD CONSTRAINT `cart_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
-
---
 -- Constraints for table `customer_profiles`
 --
 ALTER TABLE `customer_profiles`
   ADD CONSTRAINT `customer_profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
-
---
--- Constraints for table `order_tracking`
---
-ALTER TABLE `order_tracking`
-  ADD CONSTRAINT `order_tracking_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`);
-
---
--- Constraints for table `product_ratings`
---
-ALTER TABLE `product_ratings`
-  ADD CONSTRAINT `product_ratings_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`),
-  ADD CONSTRAINT `product_ratings_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
